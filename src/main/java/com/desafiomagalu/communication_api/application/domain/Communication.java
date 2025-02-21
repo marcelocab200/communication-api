@@ -3,13 +3,15 @@ package com.desafiomagalu.communication_api.application.domain;
 import java.util.Date;
 
 public class Communication {
+    private Long id;
     private Date dateHour;
     private String recipient;
     private String message;
     private CommunicationType type;
     private CommunicationStatus status;
     
-    public Communication(Date dateHour, String recipient, String message, CommunicationType type, CommunicationStatus status) {
+    public Communication(Long id, Date dateHour, String recipient, String message, CommunicationType type, CommunicationStatus status) {
+        this.id = id;
         this.dateHour = dateHour;
         this.recipient = recipient;
         this.message = message;
@@ -19,6 +21,10 @@ public class Communication {
     }
 
     // Getters 
+
+    public Long getId() {
+        return id;
+    }
 
     public Date getDateHour() {
         return dateHour;
@@ -41,6 +47,10 @@ public class Communication {
     }
 
     // Setters
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     public void setDateHour(Date dateHour) {
         this.dateHour = dateHour;
