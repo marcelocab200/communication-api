@@ -1,16 +1,17 @@
 package com.desafiomagalu.communication_api.application.domain;
 
+import java.time.LocalDateTime;
 import java.util.Date;
 
 public class Communication {
     private Long id;
-    private Date dateHour;
+    private LocalDateTime dateHour;
     private String recipient;
     private String message;
     private CommunicationType type;
     private CommunicationStatus status;
     
-    public Communication(Long id, Date dateHour, String recipient, String message, CommunicationType type, CommunicationStatus status) {
+    public Communication(Long id, LocalDateTime dateHour, String recipient, String message, CommunicationType type, CommunicationStatus status) {
         this.id = id;
         this.dateHour = dateHour;
         this.recipient = recipient;
@@ -26,7 +27,7 @@ public class Communication {
         return id;
     }
 
-    public Date getDateHour() {
+    public LocalDateTime getDateHour() {
         return dateHour;
     }
 
@@ -52,7 +53,7 @@ public class Communication {
         this.id = id;
     }
 
-    public void setDateHour(Date dateHour) {
+    public void setDateHour(LocalDateTime dateHour) {
         this.dateHour = dateHour;
     }
 

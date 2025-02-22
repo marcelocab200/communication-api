@@ -1,7 +1,7 @@
 package com.desafiomagalu.communication_api.infrastructure.entity;
 
 
-import java.util.Date;
+import java.time.LocalDateTime;
 
 import com.desafiomagalu.communication_api.application.domain.CommunicationStatus;
 import com.desafiomagalu.communication_api.application.domain.CommunicationType;
@@ -24,7 +24,7 @@ public class CommunicationEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private Date dateHour;
+    private LocalDateTime dateHour;
     private String recipient;
     private String message;
 
