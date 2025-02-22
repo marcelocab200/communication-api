@@ -6,7 +6,7 @@ public interface ICommunicationServicePort {
     
     public Communication scheduleCommunication(Communication communication);
 
-    public Communication consultCommunication(Communication communication);
+    public Communication consultCommunication(Long id);
 
-    public Communication cancelCommunication(Communication communication);
+    public Communication cancelCommunication(Long id);
 }
