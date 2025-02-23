@@ -15,6 +15,7 @@ import com.desafiomagalu.communication_api.adapters.in.dto.response.Communicatio
 import com.desafiomagalu.communication_api.adapters.in.mapper.ICommunicationControllerMapper;
 import com.desafiomagalu.communication_api.ports.in.ICommunicationServicePort;
 
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 
 @RestController
@@ -28,7 +29,7 @@ public class CommunicationController {
     private ICommunicationControllerMapper mapper;
 
     @PostMapping("/agendar")
-    public ResponseEntity<String> scheduleCommunication(@RequestBody CommunicationRequestDTO communicationRequestDTO) {
+    public ResponseEntity<String> scheduleCommunication(@RequestBody(required = true) @Valid CommunicationRequestDTO communicationRequestDTO) {
         CommunicationResponseDTO communicationResponseDTO = mapper.toResponse(communicationServicePort.scheduleCommunication(mapper.toDomain(communicationRequestDTO)));
 
         return ResponseEntity.ok().body("Comunicação agendada com sucesso! ID de comunicação: " + communicationResponseDTO.id());
