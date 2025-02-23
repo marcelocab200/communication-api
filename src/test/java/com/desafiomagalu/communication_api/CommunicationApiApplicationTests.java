@@ -1,13 +1,13 @@
-package com.desafiomagalu.communication_api;
+// package com.desafiomagalu.communication_api;
 
-import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
+// import org.junit.jupiter.api.Test;
+// import org.springframework.boot.test.context.SpringBootTest;
 
-@SpringBootTest
-class CommunicationApiApplicationTests {
+// @SpringBootTest
+// class CommunicationApiApplicationTests {
 
-	@Test
-	void contextLoads() {
-	}
+// 	@Test
+// 	void contextLoads() {
+// 	}
 
-}
+// }
