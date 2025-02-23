@@ -5,13 +5,13 @@ import java.util.Date;
 
 public class Communication {
     private Long id;
-    private LocalDateTime dateHour;
+    private Date dateHour;
     private String recipient;
     private String message;
     private CommunicationType type;
     private CommunicationStatus status;
     
-    public Communication(Long id, LocalDateTime dateHour, String recipient, String message, CommunicationType type, CommunicationStatus status) {
+    public Communication(Long id, Date dateHour, String recipient, String message, CommunicationType type, CommunicationStatus status) {
         this.id = id;
         this.dateHour = dateHour;
         this.recipient = recipient;
@@ -27,7 +27,7 @@ public class Communication {
         return id;
     }
 
-    public LocalDateTime getDateHour() {
+    public Date getDateHour() {
         return dateHour;
     }
 
@@ -53,7 +53,7 @@ public class Communication {
         this.id = id;
     }
 
-    public void setDateHour(LocalDateTime dateHour) {
+    public void setDateHour(Date dateHour) {
         this.dateHour = dateHour;
     }
 
