@@ -13,7 +13,7 @@ A **Communication API** é uma aplicação Spring Boot e foi feita como resoluç
 
 ## Funcionalidades
 
-- **Agendamento**: Agenda o envio de comunicação a partir do JSON com valores de destinatário, tipo de comunicação (EMAIL, SMS, WHATSAPP, PUSH) e a mensagem.
+- **Agendamento**: Agenda o envio de comunicação a partir do JSON com valores de destinatário, tipo de comunicação e a mensagem.
 - **Validação de dados**: Garante que os campos obrigatórios estejam preenchidos e que os valores sejam válidos.
 - **Consulta e cancelamento do envio**: Permite ver o status do envio e alterar para cancelado.
 - **Documentação com Swagger**: A API é documentada automaticamente com Swagger UI para facilitar o uso e testes.
@@ -70,11 +70,25 @@ A API possui os seguintes endpoints:
 ### 1. **Agendar o envio da comunicação**
 - `POST /agendar`
 
+| Body   | Tipo       | Descrição                           |
+| :---------- | :--------- | :---------------------------------- |
+| `recipient` | `string` | **Obrigatório**. Destinatário da comunicação |
+| `message` | `string` | **Obrigatório**. Mensagem da comunicação |
+| `type` | `string` | **Obrigatório**. Tipo de comunicação (deve ser **EMAIL, SMS, PUSH** ou **WHATSAPP**) |
+
 ### 2. **Consultar a comunicação**
 - `GET /consultar`
 
+| Parâmetro   | Tipo       | Descrição                                   |
+| :---------- | :--------- | :------------------------------------------ |
+| `id`      | `int` | **Obrigatório**. O ID da comunicação que deseja consultar |
+
 ### 3. **Cancelar o envio**
-- `PUT /cancelar`
+- `DELETE /cancelar`
+
+| Parâmetro   | Tipo       | Descrição                                   |
+| :---------- | :--------- | :------------------------------------------ |
+| `id`      | `int` | **Obrigatório**. O ID da comunicação que deseja cancelar |
   
 ## Documentação da API
 
