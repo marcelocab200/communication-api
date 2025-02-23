@@ -3,9 +3,9 @@ package com.desafiomagalu.communication_api.adapters.in.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -58,7 +58,7 @@ public class CommunicationController {
         return ResponseEntity.ok().body(mapper.toResponse(communicationServicePort.consultCommunication(id)));
     }
 
-    @PutMapping("/cancelar")
+    @DeleteMapping("/cancelar")
     @Operation(description = "Endpoint responsável por cancelar o envio da comunicação")
     @ApiResponses(value = {
         @ApiResponse(responseCode = "200", description = "Comunicação cancelada com sucesso.", content = @Content),

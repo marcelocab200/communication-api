@@ -48,6 +48,7 @@ public class CommunicationRepositoryAdapter implements ICommunicationRepositoryP
         return getCommunication(id);
     }
 
+    @Override
     public Optional<Communication> getCommunication(Long id) {
 
         log.info("Buscando comunicação no banco de dados...");

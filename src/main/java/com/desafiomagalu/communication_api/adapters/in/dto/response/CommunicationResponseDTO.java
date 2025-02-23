@@ -1,7 +1,6 @@
 package com.desafiomagalu.communication_api.adapters.in.dto.response;
 
 import java.sql.Date;
-import java.time.LocalDateTime;
 
 import com.desafiomagalu.communication_api.application.domain.CommunicationStatus;
 import com.desafiomagalu.communication_api.application.domain.CommunicationType;

@@ -6,7 +6,9 @@ import com.desafiomagalu.communication_api.adapters.in.dto.request.Communication
 import com.desafiomagalu.communication_api.adapters.in.dto.response.CommunicationResponseDTO;
 import com.desafiomagalu.communication_api.application.domain.Communication;
 
-@Mapper(componentModel = "spring")
+import static org.mapstruct.MappingConstants.ComponentModel.SPRING;
+
+@Mapper(componentModel = SPRING)
 public interface ICommunicationControllerMapper {
     
     Communication toDomain(CommunicationRequestDTO communicationRequestDTO);

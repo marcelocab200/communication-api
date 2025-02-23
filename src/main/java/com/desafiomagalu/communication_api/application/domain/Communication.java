@@ -1,6 +1,5 @@
 package com.desafiomagalu.communication_api.application.domain;
 
-import java.time.LocalDateTime;
 import java.util.Date;
 
 public class Communication {

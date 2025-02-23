@@ -1,7 +1,5 @@
 package com.desafiomagalu.communication_api.infrastructure.entity;
 
-
-import java.time.LocalDateTime;
 import java.util.Date;
 
 import com.desafiomagalu.communication_api.application.domain.CommunicationStatus;
